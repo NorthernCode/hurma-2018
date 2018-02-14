@@ -10,13 +10,16 @@ $icon-font-path: '../fonts/';
        url('../fonts/bentham-webfont.svg#webfont') format('svg');
 }
 
-@font-face{
-  font-family: 'bridgnorth';
-  src: url('../fonts/bridgnorth-webfont.eot');
-  src: url('../fonts/bridgnorth-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/bridgnorth-webfont.woff') format('woff'),
-       url('../fonts/bridgnorth-webfont.ttf') format('truetype'),
-       url('../fonts/bridgnorth-webfont.svg#webfont') format('svg');
+@font-face {
+  font-family: 'Noir-et-Blanc';
+  src: url('../fonts/Noir-et-Blanc.eot');
+  src: url('../fonts/Noir-et-Blanc.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Noir-et-Blanc.woff2') format('woff2'),
+      url('../fonts/Noir-et-Blanc.woff') format('woff'),
+      url('../fonts/Noir-et-Blanc.ttf') format('truetype'),
+      url('../fonts/Noir-et-Blanc.svg#Noir-et-Blanc') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 // bower:scss
@@ -42,8 +45,21 @@ a, a:hover, a:visited, a:active{
   color: inherit;
 }
 
-h3{
-  margin-top: 30px !important;
+h3 {
+  font-family: 'Noir-et-Blanc';
+  text-align: center;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  letter-spacing: 6px;
+}
+
+h4 {
+  font-family: 'Noir-et-Blanc';
+  //text-align: center;
+  font-size: 22px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .content-frame{
@@ -175,22 +191,6 @@ img{
       max-width: 800px;
     }
   }
-}
-
-h3 {
-  font-family: 'bridgnorth';
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 40px;
-  margin-top: 0px;
-}
-
-h4 {
-  font-family: 'bridgnorth';
-  //text-align: center;
-  font-size: 22px;
-  margin-bottom: 0px;
-  margin-top: 0px;
 }
 
 #synopsis {
