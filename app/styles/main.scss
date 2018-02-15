@@ -81,6 +81,15 @@ img{
   display: block;
 }
 
+#partners{
+  text-align: center;
+  img{
+    margin: 20px;
+    display: inline;
+    width: 200px;
+  }
+}
+
 //bg image media queries
 
 //#section1{ background-image: url('../images/w800/bg1.jpg'); }
