@@ -1,19 +1,15 @@
 'use strict';
 
+function openNav() {
+    document.getElementById('navSide').style.width = '250px';
+}
+
+function closeNav() {
+    openNav();
+    document.getElementById('navSide').style.width = '0';
+}
+
 $('document').ready(function() {
-});
-
-$('#menu-mobile select').change(function() {
-    var local = ['#etusivu', '', '#liput', '#tarina', '#speksi'];
-
-    if(local.includes($('#menu-mobile select').val())){
-        $('html, body').animate({
-            scrollTop: $($('#menu-mobile select').val()).offset().top
-        }, 500);
-        $('#menu-mobile select').val('#etusivu');
-    }else{
-        window.location.href = $('#menu-mobile select').val();
-    }
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -22,4 +18,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
+
+    closeNav();
 });

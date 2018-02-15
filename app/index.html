@@ -32,20 +32,18 @@
     <div class="menu-item right"><a href="https://www.facebook.com/teekkarispeksi/" target="_blank">Facebook</a><span>//</span></div>
     <div class="menu-item right"><a href="http://teekkarispeksi.fi/etusivu/" target="_blank">Yhdistys</a><span>//</span></div>
   </div>
-  <div id="menu-mobile">
-    <!--<div class="logo-mobile"><a href="#etusivu"><img src="images/speksi-logo.png"></a></div>-->
+  <div id="menu-mobile" onclick="openNav()">
     <div id="menu-icon"><img src="images/menu-icon.png"></div>
-      <select id="menu-select">
-        <option value="#etusivu" name="" selected="selected">Valikko</option>
-        <option value="#liput">Näytökset ja Liput</option>
-        <option value="#tarina">Tarina</option>
-        <option value="#speksi">Mikä Speksi?</option>
-        <option value="" disabled="disabled">---</option>
-        <option value="http://teekkarispeksi.fi/etusivu/">Yhdistys</option>
-        <option value="https://www.facebook.com/teekkarispeksi/">Facebook</option>
-        <option value="https://www.instagram.com/teekkarispeksi/">Instagram</option>
-      </select>
   </div>
+  <div id="navSide" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#liput">Esitykset ja Liput</a>
+      <a href="#tarina">Tarina</a>
+      <a href="#speksi">Speksi?</a>
+      <a href="#http://teekkarispeksi.fi/etusivu/">Yhdistys</a>
+      <a href="#https://www.facebook.com/teekkarispeksi/">Facebook</a>
+      <a href="#https://www.instagram.com/teekkarispeksi/">Instagram</a>
+    </div>
 </div>
 
 <div id="etusivu"></div>
