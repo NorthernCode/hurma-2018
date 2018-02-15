@@ -10,7 +10,7 @@ $('#menu-mobile select').change(function() {
         $('html, body').animate({
             scrollTop: $($('#menu-mobile select').val()).offset().top
         }, 500);
-        $('#menu-mobile select').val('');
+        $('#menu-mobile select').val('#etusivu');
     }else{
         window.location.href = $('#menu-mobile select').val();
     }
