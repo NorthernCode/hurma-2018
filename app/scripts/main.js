@@ -4,10 +4,16 @@ $('document').ready(function() {
 });
 
 $('#menu-mobile select').change(function() {
-    $('html, body').animate({
-        scrollTop: $($('#menu-mobile select').val()).offset().top
-    }, 500);
-    $('#menu-mobile select').val('');
+    var local = ['', '#liput', '#tarina', '#speksi'];
+
+    if(local.includes($('#menu-mobile select').val())){
+        $('html, body').animate({
+            scrollTop: $($('#menu-mobile select').val()).offset().top
+        }, 500);
+        $('#menu-mobile select').val('');
+    }else{
+        window.location = $('#menu-mobile select').val();
+    }
 });
 
 $(document).on('click', 'a[href^="#"]', function (event) {
