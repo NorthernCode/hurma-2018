@@ -12,7 +12,7 @@ $('#menu-mobile select').change(function() {
         }, 500);
         $('#menu-mobile select').val('');
     }else{
-        window.location = $('#menu-mobile select').val();
+        window.location.href = $('#menu-mobile select').val();
     }
 });
 
