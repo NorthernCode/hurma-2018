@@ -4,7 +4,7 @@ $('document').ready(function() {
 });
 
 $('#menu-mobile select').change(function() {
-    var local = ['Valikko', '', '#liput', '#tarina', '#speksi'];
+    var local = ['#etusivu', '', '#liput', '#tarina', '#speksi'];
 
     if(local.includes($('#menu-mobile select').val())){
         $('html, body').animate({
