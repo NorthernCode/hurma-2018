@@ -31,12 +31,13 @@ $icon-font-path: '../fonts/';
 // }
 
 body{
-  background-color: #47698A;
+  background-color: #181127;
   background-image: url('../images/bg0.jpg');  //AV
   background-attachment: fixed; //AV
   display: block;
   font-family: 'bentham', sans-serif;
   color: #dbdbdb;
+  width: 100%;
   font-size: 20px;
   font-weight: 500;
 }
