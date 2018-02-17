@@ -57,7 +57,7 @@ gulp.task('html', ['styles'], () => {
     .pipe(replace('plugins.js', 'jquery.min.js'))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(replace('<script src=/wp-content/uploads/prod/scripts/vendor.js></script>', ''))
-    .pipe(replace('rel=stylesheet href=', 'rel=stylesheet href=/wp-content/uploads/prod/scripts/'))
+    .pipe(replace('rel=stylesheet href=', 'rel=stylesheet href=/wp-content/uploads/prod/'))
     .pipe(gulp.dest('dist'));
 });
 
