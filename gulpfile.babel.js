@@ -21,7 +21,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe($.sourcemaps.write())
-    //.pipe(replace('url("../', 'url("/wp-content/uploads/prod/'))
+    .pipe(replace('url("../', 'url("/wp-content/uploads/prod/'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
