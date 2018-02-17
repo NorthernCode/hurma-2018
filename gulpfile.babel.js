@@ -5,6 +5,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import replace from 'gulp-replace';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -20,6 +21,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe($.sourcemaps.write())
+    //.pipe(replace('url("../', 'url("/wp-content/uploads/prod/'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
 });
@@ -51,7 +53,10 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('styles/*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
+    .pipe(replace('src="', 'src="/wp-content/uploads/prod/'))
+    .pipe(replace('plugins.js', 'jquery.min.js'))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe(replace('<script src=/wp-content/uploads/prod/scripts/vendor.js></script>', ''))
     .pipe(gulp.dest('dist'));
 });
 
