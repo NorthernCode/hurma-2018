@@ -54,6 +54,7 @@ gulp.task('html', ['styles'], () => {
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe(replace('src="', 'src="/wp-content/uploads/prod/'))
+    .pipe(replace('src="/wp-content/uploads/prod/https', 'src="https'))
     .pipe(replace('plugins.js', 'jquery.min.js'))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(replace('<script src=/wp-content/uploads/prod/scripts/vendor.js></script>', ''))
